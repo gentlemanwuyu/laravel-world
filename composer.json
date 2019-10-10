@@ -1,0 +1,28 @@
+{
+  "name": "gentlemanwuyu/world",
+  "description": "Provide countries, states, and cities relations database.",
+  "keywords": [ "world", "country", "city", "region" ],
+  "type": "library",
+  "license": "MIT",
+  "require": {
+    "php": ">=7.0",
+    "laravel/framework" : "5.2.*"
+  },
+  "require-dev": {
+    "mockery/mockery": "~0.9",
+    "phpunit/phpunit": "~5.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Wuyu\\World\\": "src/",
+      "Wuyu\\World\\Database\\": "database/"
+    }
+  },
+  "minimum-stability": "stable",
+  "authors": [
+    {
+      "name": "WuYu",
+      "email": "492444775@qq.com"
+    }
+  ]
+}
