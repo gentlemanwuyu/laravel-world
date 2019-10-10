@@ -44,10 +44,27 @@ class Init extends Command
      */
     public function handle()
     {
+        $this->prepareDatabase();
         $this->info('Initialize world data start:');
         $this->migrator->run(__DIR__ . '/../../../database/migrations/', ['pretend' => false]);
         $this->info('Create tables success.');
         $this->call('db:seed',["--class" => "\\Wuyu\\World\\Database\\Seeds\\WorldDatabaseSeeder"]);
         $this->info('Initialize world data finished.');
+    }
+
+    /**
+     * Prepare the migration database for running.
+     *
+     * @return void
+     */
+    protected function prepareDatabase()
+    {
+        $this->migrator->setConnection($this->option('database'));
+
+        if (! $this->migrator->repositoryExists()) {
+            $options = array('--database' => $this->option('database'));
+
+            $this->call('migrate:install', $options);
+        }
     }
 }
