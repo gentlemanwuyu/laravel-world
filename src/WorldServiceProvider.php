@@ -30,13 +30,6 @@ class WorldServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->registerCommands();
-    }
-
-    private function registerCommands()
-    {
-        $this->commands([
-            \Wuyu\World\Console\Commands\Init::class,
-        ]);
+        $this->app->register(\Wuyu\World\Providers\ConsoleServiceProvider::class);
     }
 }

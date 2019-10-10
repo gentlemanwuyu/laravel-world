@@ -3,6 +3,7 @@
 namespace Wuyu\World\Console\Commands;
 
 use Illuminate\Console\Command;
+use Illuminate\Database\Migrations\Migrator;
 
 /**
  * Init Command
@@ -23,14 +24,17 @@ class Init extends Command
      */
     protected $description = 'Initialize';
 
+    protected $migrator;
+
     /**
      * Create a new command instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(Migrator $migrator)
     {
         parent::__construct();
+        $this->migrator = $migrator;
     }
 
     /**
@@ -41,7 +45,7 @@ class Init extends Command
     public function handle()
     {
         $this->info('Initialize world data start:');
-        $this->call('migrate --path=' . __DIR__ . '/../../../database/migrations/');
+        $this->migrator->run(__DIR__ . '/../../../database/migrations/', ['pretend' => false]);
         $this->info('Create tables success.');
         $this->call('db:seed',["--class" => "\\Wuyu\\World\\Database\\Seeds\\WorldDatabaseSeeder"]);
         $this->info('Initialize world data finished.');
