@@ -4,6 +4,8 @@ namespace Wuyu\World\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Database\Migrations\Migrator;
+use Symfony\Component\Console\Input\InputOption;
+use Illuminate\Support\Arr;
 
 /**
  * Init Command
@@ -44,12 +46,23 @@ class Init extends Command
      */
     public function handle()
     {
-        $this->prepareDatabase();
         $this->info('Initialize world data start:');
-        $this->migrator->run(__DIR__ . '/../../../database/migrations/', ['pretend' => false]);
+        $this->migrate();
         $this->info('Create tables success.');
         $this->call('db:seed',["--class" => "\\Wuyu\\World\\Database\\Seeds\\WorldDatabaseSeeder"]);
         $this->info('Initialize world data finished.');
+    }
+
+    /**
+     * Migrate
+     *
+     * @return void
+     */
+    protected function migrate()
+    {
+        $this->prepareDatabase();
+        $pretend = Arr::get($this->option(), 'pretend', false);
+        $this->migrator->run(__DIR__ . '/../../../database/migrations/', ['pretend' => $pretend]);
     }
 
     /**
@@ -66,5 +79,18 @@ class Init extends Command
 
             $this->call('migrate:install', $options);
         }
+    }
+
+    /**
+     * Get the console command options.
+     *
+     * @return array
+     */
+    protected function getOptions()
+    {
+        return [
+            ['database', null, InputOption::VALUE_OPTIONAL, 'The database connection to use.'],
+            ['pretend', null, InputOption::VALUE_NONE, 'Dump the SQL queries that would be run.'],
+        ];
     }
 }
