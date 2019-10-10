@@ -5733,7 +5733,7 @@ class ChineseRegionsTableSeeder extends Seeder
         ];
 
         foreach ($chinese_regions as $region_1) {
-            $state = DB::table('chinese_regions')->updateOrCreate(['code' => $region_1['code']], [
+            $state = DB::table('chinese_regions')->updateOrInsert(['code' => $region_1['code']], [
                 'name' => $region_1['name'],
                 'code' => $region_1['code'],
                 'level' => 1,
@@ -5743,7 +5743,7 @@ class ChineseRegionsTableSeeder extends Seeder
 
             if (!empty($region_1['children'])) {
                 foreach ($region_1['children'] as $region_2) {
-                    $city = DB::table('chinese_regions')->updateOrCreate(['code' => $region_2['code']], [
+                    $city = DB::table('chinese_regions')->updateOrInsert(['code' => $region_2['code']], [
                         'name' => $region_2['name'],
                         'code' => $region_2['code'],
                         'level' => 2,
@@ -5753,7 +5753,7 @@ class ChineseRegionsTableSeeder extends Seeder
 
                     if (!empty($region_2['children'])) {
                         foreach ($region_2['children'] as $region_3) {
-                            DB::table('chinese_regions')->updateOrCreate(['code' => $region_3['code']], [
+                            DB::table('chinese_regions')->updateOrInsert(['code' => $region_3['code']], [
                                 'name' => $region_3['name'],
                                 'code' => $region_3['code'],
                                 'level' => 3,
