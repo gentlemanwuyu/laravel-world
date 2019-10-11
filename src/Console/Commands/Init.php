@@ -62,7 +62,7 @@ class Init extends Command
     {
         $this->prepareDatabase();
 
-        $this->migrator->run(__DIR__ . '/../../../database/migrations/', ['pretend' => $pretend]);
+        $this->migrator->run(__DIR__ . '/../../../database/migrations/', ['pretend' => false]);
     }
 
     /**
