@@ -31,5 +31,9 @@ class WorldServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->register(\Wuyu\World\Providers\ConsoleServiceProvider::class);
+
+        $this->app->bind('world', function ($app) {
+            return new World();
+        });
     }
 }
