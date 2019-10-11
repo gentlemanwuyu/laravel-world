@@ -2997,33 +2997,25 @@ class ChineseRegionsTableSeeder extends Seeder
                         'name' => '潜江市',
                         'code' => '429005',
                         'phone_code' => '2728',
-                        'children' => [
-
-                        ]
+                        'children' => []
                     ],
                     [
                         'name' => '神农架林区',
                         'code' => '429021',
                         'phone_code' => '1719',
-                        'children' => [
-
-                        ]
+                        'children' => []
                     ],
                     [
                         'name' => '天门市',
                         'code' => '429006',
                         'phone_code' => '1728',
-                        'children' => [
-
-                        ]
+                        'children' => []
                     ],
                     [
                         'name' => '仙桃市',
                         'code' => '429004',
                         'phone_code' => '0728',
-                        'children' => [
-
-                        ]
+                        'children' => []
                     ],
                 ]
             ],
@@ -3483,17 +3475,13 @@ class ChineseRegionsTableSeeder extends Seeder
                         'name' => '东莞市',
                         'code' => '441900',
                         'phone_code' => '0769',
-                        'children' => [
-
-                        ]
+                        'children' => []
                     ],
                     [
                         'name' => '中山市',
                         'code' => '442000',
                         'phone_code' => '0760',
-                        'children' => [
-
-                        ]
+                        'children' => []
                     ],
                     [
                         'name' => '潮州市',
@@ -3533,9 +3521,7 @@ class ChineseRegionsTableSeeder extends Seeder
                         'name' => '东沙群岛',
                         'code' => '442100',
                         'phone_code' => '',
-                        'children' => [
-
-                        ]
+                        'children' => []
                     ],
                 ]
             ],
@@ -3764,33 +3750,25 @@ class ChineseRegionsTableSeeder extends Seeder
                         'name' => '白沙黎族自治县',
                         'code' => '469025',
                         'phone_code' => '0802',
-                        'children' => [
-
-                        ]
+                        'children' => []
                     ],
                     [
                         'name' => '保亭黎族苗族自治县',
                         'code' => '469029',
                         'phone_code' => '0801',
-                        'children' => [
-
-                        ]
+                        'children' => []
                     ],
                     [
                         'name' => '昌江黎族自治县',
                         'code' => '469026',
                         'phone_code' => '0803',
-                        'children' => [
-
-                        ]
+                        'children' => []
                     ],
                     [
                         'name' => '澄迈县',
                         'code' => '469023',
                         'phone_code' => '0804',
-                        'children' => [
-
-                        ]
+                        'children' => []
                     ],
                     [
                         'name' => '海口市',
@@ -3828,97 +3806,73 @@ class ChineseRegionsTableSeeder extends Seeder
                         'name' => '儋州市',
                         'code' => '460400',
                         'phone_code' => '0805',
-                        'children' => [
-
-                        ]
+                        'children' => []
                     ],
                     [
                         'name' => '定安县',
                         'code' => '469021',
                         'phone_code' => '0806',
-                        'children' => [
-
-                        ]
+                        'children' => []
                     ],
                     [
                         'name' => '东方市',
                         'code' => '469007',
                         'phone_code' => '0807',
-                        'children' => [
-
-                        ]
+                        'children' => []
                     ],
                     [
                         'name' => '乐东黎族自治县',
                         'code' => '469027',
                         'phone_code' => '2802',
-                        'children' => [
-
-                        ]
+                        'children' => []
                     ],
                     [
                         'name' => '临高县',
                         'code' => '469024',
                         'phone_code' => '1896',
-                        'children' => [
-
-                        ]
+                        'children' => []
                     ],
                     [
                         'name' => '陵水黎族自治县',
                         'code' => '469028',
                         'phone_code' => '0809',
-                        'children' => [
-
-                        ]
+                        'children' => []
                     ],
                     [
                         'name' => '琼海市',
                         'code' => '469002',
                         'phone_code' => '1894',
-                        'children' => [
-
-                        ]
+                        'children' => []
                     ],
                     [
                         'name' => '琼中黎族苗族自治县',
                         'code' => '469030',
                         'phone_code' => '1899',
-                        'children' => [
-
-                        ]
+                        'children' => []
                     ],
                     [
                         'name' => '屯昌县',
                         'code' => '469022',
                         'phone_code' => '1892',
-                        'children' => [
-
-                        ]
+                        'children' => []
                     ],
                     [
                         'name' => '万宁市',
                         'code' => '469006',
                         'phone_code' => '1898',
-                        'children' => [
-
-                        ]
+                        'children' => []
                     ],
                     [
                         'name' => '文昌市',
                         'code' => '469005',
                         'phone_code' => '1893',
-                        'children' => [
-
-                        ]
+                        'children' => []
                     ],
                     [
                         'name' => '五指山市',
                         'code' => '469001',
                         'phone_code' => '1897',
-                        'children' => [
-
-                        ]
+                        'children' => []
                     ],
                 ]
             ],
@@ -5062,9 +5016,7 @@ class ChineseRegionsTableSeeder extends Seeder
                         'name' => '嘉峪关市',
                         'code' => '620200',
                         'phone_code' => '1937',
-                        'children' => [
-
-                        ]
+                        'children' => []
                     ],
                     [
                         'name' => '金昌市',
@@ -5410,49 +5362,37 @@ class ChineseRegionsTableSeeder extends Seeder
                         'name' => '阿拉尔市',
                         'code' => '659002',
                         'phone_code' => '1997',
-                        'children' => [
-
-                        ]
+                        'children' => []
                     ],
                     [
                         'name' => '北屯市',
                         'code' => '659005',
                         'phone_code' => '1906',
-                        'children' => [
-
-                        ]
+                        'children' => []
                     ],
                     [
                         'name' => '可克达拉市',
                         'code' => '659008',
                         'phone_code' => '1999',
-                        'children' => [
-
-                        ]
+                        'children' => []
                     ],
                     [
                         'name' => '昆玉市',
                         'code' => '659009',
                         'phone_code' => '1903',
-                        'children' => [
-
-                        ]
+                        'children' => []
                     ],
                     [
                         'name' => '石河子市',
                         'code' => '659001',
                         'phone_code' => '0993',
-                        'children' => [
-
-                        ]
+                        'children' => []
                     ],
                     [
                         'name' => '双河市',
                         'code' => '659007',
                         'phone_code' => '1909',
-                        'children' => [
-
-                        ]
+                        'children' => []
                     ],
                     [
                         'name' => '乌鲁木齐市',
@@ -5652,25 +5592,19 @@ class ChineseRegionsTableSeeder extends Seeder
                         'name' => '铁门关市',
                         'code' => '659006',
                         'phone_code' => '1996',
-                        'children' => [
-
-                        ]
+                        'children' => []
                     ],
                     [
                         'name' => '图木舒克市',
                         'code' => '659003',
                         'phone_code' => '1998',
-                        'children' => [
-
-                        ]
+                        'children' => []
                     ],
                     [
                         'name' => '五家渠市',
                         'code' => '659004',
                         'phone_code' => '1994',
-                        'children' => [
-
-                        ]
+                        'children' => []
                     ],
                 ]
             ],
