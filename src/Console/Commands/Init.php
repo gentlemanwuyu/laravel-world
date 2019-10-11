@@ -61,7 +61,7 @@ class Init extends Command
     protected function migrate()
     {
         $this->prepareDatabase();
-        $pretend = Arr::get($this->option(), 'pretend', false);
+
         $this->migrator->run(__DIR__ . '/../../../database/migrations/', ['pretend' => $pretend]);
     }
 
@@ -72,25 +72,8 @@ class Init extends Command
      */
     protected function prepareDatabase()
     {
-        $this->migrator->setConnection($this->option('database'));
-
         if (! $this->migrator->repositoryExists()) {
-            $options = array('--database' => $this->option('database'));
-
-            $this->call('migrate:install', $options);
+            $this->call('migrate:install');
         }
-    }
-
-    /**
-     * Get the console command options.
-     *
-     * @return array
-     */
-    protected function getOptions()
-    {
-        return [
-            ['database', null, InputOption::VALUE_OPTIONAL, 'The database connection to use.'],
-            ['pretend', null, InputOption::VALUE_NONE, 'Dump the SQL queries that would be run.'],
-        ];
     }
 }
