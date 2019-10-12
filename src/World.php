@@ -35,4 +35,16 @@ class World
 
         return $regions;
     }
+
+    /**
+     * Get all countries
+     *
+     * @return array
+     */
+    public function countries()
+    {
+        $countries = DB::table('countries')->get();
+
+        return json_decode(json_encode(array_column($countries, null, 'abbreviation')), true);
+    }
 }
